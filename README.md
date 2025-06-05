@@ -1,19 +1,41 @@
-# Prosodic Event Detection with Classical ML
+# Prosodic Event Detection with Classical ML 
+### [Work in progress as of June 5, 2025]
 
 ## Overview
-End-to-end pipeline for detecting prosodic prominence and boundaries in speech
-using traditional machine learning approaches.
+End-to-end pipeline for detecting prosodic prominence and boundaries in speech using traditional machine learning approaches.
+
+Automatic detection of prosodic prominence and boundaries in speech using classical machine learning and neural networks. Achieves state-of-the-art performance on the Boston University Radio News Corpus through sequence-level classification and smart threshold optimization.
+
+## Dataset
+Boston University Radio News Corpus (AutoRPT)
+- 142 audio files with hand-labeled prosodic events
+- 16 acoustic features extracted per 10ms frame
+- ~420,000 total frames
 
 ## Features
-- Robust audio preprocessing with librosa
-- Frame-level feature extraction (F0, energy, MFCCs)
-- Comprehensive model comparison (9 algorithms)
-- Production-ready evaluation pipeline
+- Comprehensive acoustic feature extraction pipeline
+- Class imbalance handling through sequence-level modeling
+- Multi-task learning for joint prominence and boundary detection
+- Reproducible experiments with detailed evaluation metrics
 
 ## Results
 - **Prominence**: F1 = 0.47-0.48 (strong baseline)
 - **Boundary**: F1 = 0.12-0.13 (more challenging task)
 - Models generalize well across speakers
+- Neural CNN: 85.3% prominence F1, 56.6% boundary F1
+- 117% improvement over classical ML baselines
+- Production-ready models for text-to-speech and speech recognition applications
+
+
+| Model | Prominence F1 | Boundary F1 | Average F1 |
+|-------|---------------|-------------|------------|
+| Neural CNN | 85.3% | 56.6% | 71.0% |
+| Neural RNN | 83.5% | 48.6% | 66.1% |
+| Random Forest | 48.6% | 17.0% | 32.8% |
+| Logistic Regression | 47.5% | 14.3% | 30.9% |
+
 
 ## Next Steps
 - Experimenting with LLMs, fine-tuning models for improved performance
+
+### Tags: #speech-processing, #prosody, #neural-networks, #machine-learning, #nlp, #pytorch, #speech-recognition, #text-to-speech
