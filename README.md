@@ -4,7 +4,7 @@
 ## Overview
 End-to-end pipeline for detecting prosodic prominence and boundaries in speech using traditional machine learning approaches.
 
-Automatic detection of prosodic prominence and boundaries in speech using classical machine learning and neural networks. Achieves state-of-the-art performance on the Boston University Radio News Corpus through sequence-level classification and smart threshold optimization.
+Automatic detection of prosodic prominence and boundaries in speech using classical machine learning and neural networks. According to the findings, the neural networks (single layer CNN and RNN) achieve state-of-the-art performance on the Boston University Radio News Corpus through sequence-level classification and smart threshold optimization.
 
 ## Dataset
 Boston University Radio News Corpus (AutoRPT)
