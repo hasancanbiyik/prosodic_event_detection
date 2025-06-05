@@ -1,5 +1,5 @@
 # Prosodic Event Detection with Classical ML 
-### [Researcg in progress as of June 5, 2025]
+### [Research is in progress as of June 5, 2025]
 
 ## Overview
 End-to-end pipeline for detecting prosodic prominence and boundaries in speech using traditional machine learning approaches.
