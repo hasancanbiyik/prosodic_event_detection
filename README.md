@@ -34,6 +34,9 @@ Boston University Radio News Corpus (AutoRPT)
 | Random Forest | 48.6% | 17.0% | 32.8% |
 | Logistic Regression | 47.5% | 14.3% | 30.9% |
 
+## Usage
+1. Run `preprocess_data.ipynb` to extract features and create datasets
+2. Run `traditional_ML_model_experiments.ipynb` to train and evaluate models
 
 ## Next Steps
 - Experimenting with LLMs, fine-tuning models for improved performance
