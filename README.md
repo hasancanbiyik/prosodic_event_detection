@@ -1,4 +1,4 @@
-# Prosodic Event Detection with Classical ML 
+# Prosodic Event Detection with Classical and Neural Models 
 ### [Research is in progress as of June 5, 2025]
 
 ## Overview
@@ -37,6 +37,8 @@ Boston University Radio News Corpus (AutoRPT)
 ## Usage
 1. Run `preprocess_data.ipynb` to extract features and create datasets
 2. Run `traditional_ML_model_experiments.ipynb` to train and evaluate models
+3. Run `neural_networks.ipynb` to train CNN/RNN models and evaluate final performance.
+
 
 ## Next Steps
 - Experimenting with LLMs, fine-tuning models for improved performance
