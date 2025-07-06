@@ -12,6 +12,20 @@ Boston University Radio News Corpus (AutoRPT)
 - 16 acoustic features extracted per 10ms frame
 - ~420,000 total frames
 
+### Dataset Access
+
+This project uses the [Boston University Radio News Corpus (AutoRPT)](https://www.isip.piconepress.com/projects/speech/corpora/bu_radio_news/) for prosodic event detection.
+
+To run the code, you must download and place the dataset in the following structure:
+
+/data/AutoRPT_Data/
+├── Annotations/
+├── f1a/
+├── f2b/
+├── ...
+
+Due to licensing restrictions, I cannot host the dataset directly in this repository.
+
 ## Features
 - Comprehensive acoustic feature extraction pipeline
 - Class imbalance handling through sequence-level modeling
