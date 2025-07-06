@@ -1,6 +1,7 @@
 numpy
 pandas
 librosa
+seaborn
 soundfile
 scikit-learn
 pickle
