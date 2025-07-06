@@ -1,52 +1,50 @@
-# Prosodic Event Detection with Classical and Neural Models 
-### [Research is in progress as of June 5, 2025]
+# 🎙️ Prosodic Event Detection with Classical and Neural Models  
+### Research in Progress (as of July 6, 2025)
 
 ## Overview
-End-to-end pipeline for detecting prosodic prominence and boundaries in speech using traditional machine learning approaches.
+This project implements an end-to-end machine learning pipeline for detecting **prosodic events**—specifically **prominence** and **boundary** markers—in speech.
 
-Automatic detection of prosodic prominence and boundaries in speech using classical machine learning and neural networks. According to the findings, the neural networks (single layer CNN and RNN) achieve state-of-the-art performance on the Boston University Radio News Corpus through sequence-level classification and smart threshold optimization.
+I used both **traditional ML algorithms** and **simple neural networks (CNN & RNN)** to tackle the task. The neural models achieved state-of-the-art performance on the **Boston University Radio News Corpus (AutoRPT)**, showcasing how even compact architectures can model prosodic structure effectively through **sequence-level classification** and **smart threshold optimization**.
 
 ## Dataset
-Boston University Radio News Corpus (AutoRPT)
-- 142 audio files with hand-labeled prosodic events
-- 16 acoustic features extracted per 10ms frame
+
+This project uses the **[Boston University Radio News Corpus (AutoRPT)](https://catalog.ldc.upenn.edu/LDC96S36)**:
+- 142 audio files with hand-labeled prosodic events  
+- 16 acoustic features extracted every 10ms  
 - ~420,000 total frames
 
-### Dataset Access
-
-This project uses the [Boston University Radio News Corpus (AutoRPT)](https://catalog.ldc.upenn.edu/LDC96S36) for prosodic event detection.
-
-To run the code, you must download and place the dataset. Due to licensing restrictions, I cannot host the dataset directly in this repository.
+**Note**: Due to licensing restrictions, I cannot include the dataset in this repo. You'll need to obtain it from LDC and place it in the appropriate folder structure (`AutoRPT_Data/`) to run the code.
 
 ## Features
-- Comprehensive acoustic feature extraction pipeline
-- Class imbalance handling through sequence-level modeling
-- Multi-task learning for joint prominence and boundary detection
-- Reproducible experiments with detailed evaluation metrics
+- Acoustic feature extraction pipeline built from scratch
+- Sequence-level modeling to handle temporal structure
+- Multi-task learning: detect **prominence** and **boundaries** jointly
+- Class imbalance mitigation
+- Fully reproducible experiments with evaluation metrics
 
 ## Results
-- **Prominence**: F1 = 0.47-0.48 (strong baseline)
-- **Boundary**: F1 = 0.12-0.13 (more challenging task)
-- Models generalize well across speakers
-- Neural CNN: 85.3% prominence F1, 56.6% boundary F1
-- 117% improvement over classical ML baselines
-- Production-ready models for text-to-speech and speech recognition applications
 
+- **Prominence**: F1 = 0.47–0.48 (classical ML baseline)  
+- **Boundary**: F1 = 0.12–0.13 (classical ML baseline — much harder task)  
+- Neural CNN achieved **85.3%** prominence F1, **56.6%** boundary F1  
+- **117% improvement** over classical ML models  
+- Models generalized well across speakers
 
-| Model | Prominence F1 | Boundary F1 | Average F1 |
-|-------|---------------|-------------|------------|
-| Neural CNN | 85.3% | 56.6% | 71.0% |
-| Neural RNN | 83.5% | 48.6% | 66.1% |
-| Random Forest | 48.6% | 17.0% | 32.8% |
-| Logistic Regression | 47.5% | 14.3% | 30.9% |
+| Model              | Prominence F1 | Boundary F1 | Average F1 |
+|-------------------|---------------|-------------|------------|
+| Neural CNN         | **85.3%**     | **56.6%**   | **71.0%**   |
+| Neural RNN         | 83.5%         | 48.6%       | 66.1%       |
+| Random Forest      | 48.6%         | 17.0%       | 32.8%       |
+| Logistic Regression| 47.5%         | 14.3%       | 30.9%       |
 
 ## Usage
-1. Run `preprocess_data.ipynb` to extract features and create datasets
-2. Run `traditional_ML_model_experiments.ipynb` to train and evaluate models
-3. Run `neural_networks.ipynb` to train CNN/RNN models and evaluate final performance.
 
+```bash
+# Step 1: Clone the repo
+git clone https://github.com/hasancanbiyik/prosodic_event_detection.git
+cd prosodic_event_detection
 
-## Next Steps
-- Experimenting with LLMs, fine-tuning models for improved performance
-
-### Tags: #speech-processing, #prosody, #neural-networks, #machine-learning, #nlp, #pytorch, #speech-recognition, #text-to-speech
+# Step 2: Create a virtual environment
+conda create -n prosody-nn python=3.10
+conda activate prosody-nn
+pip install -r requirements.txt
