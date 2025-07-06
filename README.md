@@ -14,17 +14,9 @@ Boston University Radio News Corpus (AutoRPT)
 
 ### Dataset Access
 
-This project uses the [Boston University Radio News Corpus (AutoRPT)](https://www.isip.piconepress.com/projects/speech/corpora/bu_radio_news/) for prosodic event detection.
+This project uses the [Boston University Radio News Corpus (AutoRPT)](https://catalog.ldc.upenn.edu/LDC96S36) for prosodic event detection.
 
-To run the code, you must download and place the dataset in the following structure:
-
-/data/AutoRPT_Data/
-├── Annotations/
-├── f1a/
-├── f2b/
-├── ...
-
-Due to licensing restrictions, I cannot host the dataset directly in this repository.
+To run the code, you must download and place the dataset. Due to licensing restrictions, I cannot host the dataset directly in this repository.
 
 ## Features
 - Comprehensive acoustic feature extraction pipeline
