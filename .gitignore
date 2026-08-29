@@ -1,0 +1,24 @@
+.DS_Store
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+
+# The BURNC/AutoRPT corpus is licensed and is not redistributed.
+AutoRPT_Data/
+
+# Local preprocessing caches and trained checkpoints.
+artifacts/*.pkl
+artifacts/*.npz
+artifacts/*.pt
+artifacts/*.pth
+
+# Notebook and editor state.
+.ipynb_checkpoints/
+.idea/
+.vscode/

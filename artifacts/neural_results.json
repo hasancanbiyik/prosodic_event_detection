@@ -1,0 +1,482 @@
+{
+  "stats": {
+    "n_files": 142,
+    "n_speakers": 6,
+    "total_minutes": 70.03116666666666,
+    "total_frames": 420187,
+    "prominence_rate": 0.17501493382708175,
+    "boundary_rate": 0.05279792092568309,
+    "per_speaker": {
+      "f1a": 22,
+      "f2b": 24,
+      "f3a": 24,
+      "m1b": 24,
+      "m2b": 24,
+      "m3b": 24
+    }
+  },
+  "split": {
+    "train_speakers": [
+      "f1a",
+      "f2b",
+      "m1b",
+      "m3b"
+    ],
+    "val_speakers": [
+      "m2b"
+    ],
+    "test_speakers": [
+      "f3a"
+    ]
+  },
+  "config": {
+    "seed": 42,
+    "epochs": 12,
+    "batch_size": 64,
+    "window_frames": 50,
+    "hop_frames": 25,
+    "prominence_threshold": 0.15,
+    "boundary_threshold": 0.1
+  },
+  "frame_neural": {
+    "model_name": "FrameClassifierConv1D",
+    "task_kind": "frame",
+    "val": {
+      "prominence": {
+        "task": "prominence",
+        "f1": 0.591462580380353,
+        "precision": 0.549580472921434,
+        "recall": 0.6402547393364929,
+        "auc": 0.8607463211755684,
+        "positive_rate": 0.19398396874191973,
+        "trivial_majority_f1": 0.32493563367742245,
+        "n_frames": 69614,
+        "confusion": [
+          49024,
+          7086,
+          4858,
+          8646
+        ]
+      },
+      "boundary": {
+        "task": "boundary",
+        "f1": 0.27360937650110484,
+        "precision": 0.16927191679049033,
+        "recall": 0.7132481843225645,
+        "auc": 0.8333302801855061,
+        "positive_rate": 0.05735915189473382,
+        "trivial_majority_f1": 0.10849511595364571,
+        "n_frames": 69614,
+        "confusion": [
+          51644,
+          13977,
+          1145,
+          2848
+        ]
+      }
+    },
+    "test": {
+      "prominence": {
+        "task": "prominence",
+        "f1": 0.5617023637776052,
+        "precision": 0.4291770890744902,
+        "recall": 0.8126354660030505,
+        "auc": 0.8772388870439902,
+        "positive_rate": 0.17349098910893848,
+        "trivial_majority_f1": 0.2956835471581671,
+        "n_frames": 71802,
+        "confusion": [
+          45881,
+          13464,
+          2334,
+          10123
+        ]
+      },
+      "boundary": {
+        "task": "boundary",
+        "f1": 0.2505166475315729,
+        "precision": 0.15673035483407557,
+        "recall": 0.6237850200114351,
+        "auc": 0.8205147319399863,
+        "positive_rate": 0.04871730592462605,
+        "trivial_majority_f1": 0.09290836653386454,
+        "n_frames": 71802,
+        "confusion": [
+          56564,
+          11740,
+          1316,
+          2182
+        ]
+      }
+    },
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 1.7770209789276123,
+        "val_prom_f1": 0.5811690584529227,
+        "val_bound_f1": 0.2131048322874526
+      },
+      {
+        "epoch": 2,
+        "train_loss": 1.5817308267534536,
+        "val_prom_f1": 0.5916976891198988,
+        "val_bound_f1": 0.22862515951373497
+      },
+      {
+        "epoch": 3,
+        "train_loss": 1.5192291474818318,
+        "val_prom_f1": 0.5841864224137931,
+        "val_bound_f1": 0.2483315481585235
+      },
+      {
+        "epoch": 4,
+        "train_loss": 1.475059487945155,
+        "val_prom_f1": 0.585829512366545,
+        "val_bound_f1": 0.2330541308438803
+      },
+      {
+        "epoch": 5,
+        "train_loss": 1.4447205276973885,
+        "val_prom_f1": 0.597396449704142,
+        "val_bound_f1": 0.24318865983309834
+      },
+      {
+        "epoch": 6,
+        "train_loss": 1.424927651427835,
+        "val_prom_f1": 0.5895407448893867,
+        "val_bound_f1": 0.234810345490181
+      },
+      {
+        "epoch": 7,
+        "train_loss": 1.396977850399952,
+        "val_prom_f1": 0.598762157382847,
+        "val_bound_f1": 0.2353235252106842
+      },
+      {
+        "epoch": 8,
+        "train_loss": 1.3814298197059147,
+        "val_prom_f1": 0.5927762803234501,
+        "val_bound_f1": 0.22293493912815815
+      },
+      {
+        "epoch": 9,
+        "train_loss": 1.3600698055675804,
+        "val_prom_f1": 0.5839544988872011,
+        "val_bound_f1": 0.2494543186778921
+      },
+      {
+        "epoch": 10,
+        "train_loss": 1.341332397833061,
+        "val_prom_f1": 0.591462580380353,
+        "val_bound_f1": 0.27360937650110484
+      },
+      {
+        "epoch": 11,
+        "train_loss": 1.3213345911887941,
+        "val_prom_f1": 0.5781053632689107,
+        "val_bound_f1": 0.2511186751826213
+      },
+      {
+        "epoch": 12,
+        "train_loss": 1.3160296614070552,
+        "val_prom_f1": 0.583552118072802,
+        "val_bound_f1": 0.253346592212958
+      }
+    ],
+    "checkpoint": "artifacts/frame_level_cnn.pt"
+  },
+  "sequence_neural_cnn": {
+    "model_name": "SequenceClassifier-cnn",
+    "task_kind": "sequence",
+    "val": {
+      "prominence": {
+        "task": "prominence",
+        "f1": 0.7741935483870968,
+        "precision": 0.8823529411764706,
+        "recall": 0.6896551724137931,
+        "auc": 0.8071771857729347,
+        "positive_rate": 0.7276363636363636,
+        "trivial_majority_f1": 0.8423489791622816,
+        "n_frames": 2750,
+        "confusion": [
+          565,
+          184,
+          621,
+          1380
+        ]
+      },
+      "boundary": {
+        "task": "boundary",
+        "f1": 0.5927740355174526,
+        "precision": 0.5493757094211124,
+        "recall": 0.6436170212765957,
+        "auc": 0.793663344195259,
+        "positive_rate": 0.27345454545454545,
+        "trivial_majority_f1": 0.42946887492861224,
+        "n_frames": 2750,
+        "confusion": [
+          1601,
+          397,
+          268,
+          484
+        ]
+      }
+    },
+    "test": {
+      "prominence": {
+        "task": "prominence",
+        "f1": 0.8419277108433735,
+        "precision": 0.7726669615214506,
+        "recall": 0.9248279512969825,
+        "auc": 0.8004100741244794,
+        "positive_rate": 0.6663139329805996,
+        "trivial_majority_f1": 0.7997459779847587,
+        "n_frames": 2835,
+        "confusion": [
+          432,
+          514,
+          142,
+          1747
+        ]
+      },
+      "boundary": {
+        "task": "boundary",
+        "f1": 0.5612443292287751,
+        "precision": 0.48488241881298993,
+        "recall": 0.6661538461538462,
+        "auc": 0.8000851962682627,
+        "positive_rate": 0.2292768959435626,
+        "trivial_majority_f1": 0.37302725968436157,
+        "n_frames": 2835,
+        "confusion": [
+          1725,
+          460,
+          217,
+          433
+        ]
+      }
+    },
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 1.3803489669481337,
+        "val_prom_f1": 0.66375,
+        "val_bound_f1": 0.49559981472904124
+      },
+      {
+        "epoch": 2,
+        "train_loss": 1.2747955132742326,
+        "val_prom_f1": 0.6747967479674797,
+        "val_bound_f1": 0.5436893203883495
+      },
+      {
+        "epoch": 3,
+        "train_loss": 1.2313030301767338,
+        "val_prom_f1": 0.7271116361488482,
+        "val_bound_f1": 0.5783397471137988
+      },
+      {
+        "epoch": 4,
+        "train_loss": 1.2012870331641334,
+        "val_prom_f1": 0.7373678025851939,
+        "val_bound_f1": 0.5419068736141907
+      },
+      {
+        "epoch": 5,
+        "train_loss": 1.182657803770851,
+        "val_prom_f1": 0.7661267405512929,
+        "val_bound_f1": 0.576271186440678
+      },
+      {
+        "epoch": 6,
+        "train_loss": 1.1627648200400296,
+        "val_prom_f1": 0.7741935483870968,
+        "val_bound_f1": 0.5927740355174526
+      },
+      {
+        "epoch": 7,
+        "train_loss": 1.1449787135998264,
+        "val_prom_f1": 0.6494325346784363,
+        "val_bound_f1": 0.5697387875800887
+      },
+      {
+        "epoch": 8,
+        "train_loss": 1.1259725869675514,
+        "val_prom_f1": 0.5637119113573407,
+        "val_bound_f1": 0.5448717948717948
+      },
+      {
+        "epoch": 9,
+        "train_loss": 1.1142377565214292,
+        "val_prom_f1": 0.6224120933289516,
+        "val_bound_f1": 0.5903971547125074
+      },
+      {
+        "epoch": 10,
+        "train_loss": 1.1086559090986443,
+        "val_prom_f1": 0.7735955056179775,
+        "val_bound_f1": 0.5605214152700186
+      },
+      {
+        "epoch": 11,
+        "train_loss": 1.0931934496668418,
+        "val_prom_f1": 0.6875387476751394,
+        "val_bound_f1": 0.5546134663341646
+      },
+      {
+        "epoch": 12,
+        "train_loss": 1.073837726821484,
+        "val_prom_f1": 0.7146650929477723,
+        "val_bound_f1": 0.6194797338173019
+      }
+    ],
+    "checkpoint": "artifacts/sequence_level_cnn.pt"
+  },
+  "sequence_neural_bilstm": {
+    "model_name": "SequenceClassifier-bilstm",
+    "task_kind": "sequence",
+    "val": {
+      "prominence": {
+        "task": "prominence",
+        "f1": 0.8455900935051807,
+        "precision": 0.8553169734151329,
+        "recall": 0.8360819590204898,
+        "auc": 0.8062210550265587,
+        "positive_rate": 0.7276363636363636,
+        "trivial_majority_f1": 0.8423489791622816,
+        "n_frames": 2750,
+        "confusion": [
+          466,
+          283,
+          328,
+          1673
+        ]
+      },
+      "boundary": {
+        "task": "boundary",
+        "f1": 0.583000570450656,
+        "precision": 0.5104895104895105,
+        "recall": 0.6795212765957447,
+        "auc": 0.7873784688944263,
+        "positive_rate": 0.27345454545454545,
+        "trivial_majority_f1": 0.42946887492861224,
+        "n_frames": 2750,
+        "confusion": [
+          1508,
+          490,
+          241,
+          511
+        ]
+      }
+    },
+    "test": {
+      "prominence": {
+        "task": "prominence",
+        "f1": 0.839708988500352,
+        "precision": 0.7542158516020236,
+        "recall": 0.9470619375330863,
+        "auc": 0.7866915053995704,
+        "positive_rate": 0.6663139329805996,
+        "trivial_majority_f1": 0.7997459779847587,
+        "n_frames": 2835,
+        "confusion": [
+          363,
+          583,
+          100,
+          1789
+        ]
+      },
+      "boundary": {
+        "task": "boundary",
+        "f1": 0.5603164139749506,
+        "precision": 0.49019607843137253,
+        "recall": 0.6538461538461539,
+        "auc": 0.8021123041718008,
+        "positive_rate": 0.2292768959435626,
+        "trivial_majority_f1": 0.37302725968436157,
+        "n_frames": 2835,
+        "confusion": [
+          1743,
+          442,
+          225,
+          425
+        ]
+      }
+    },
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 1.391974475812133,
+        "val_prom_f1": 0.8434826371414192,
+        "val_bound_f1": 0.55254877281309
+      },
+      {
+        "epoch": 2,
+        "train_loss": 1.223723942701267,
+        "val_prom_f1": 0.8455900935051807,
+        "val_bound_f1": 0.583000570450656
+      },
+      {
+        "epoch": 3,
+        "train_loss": 1.1727554089361008,
+        "val_prom_f1": 0.7513467536149703,
+        "val_bound_f1": 0.5753138075313807
+      },
+      {
+        "epoch": 4,
+        "train_loss": 1.1350653734916785,
+        "val_prom_f1": 0.7646568491247568,
+        "val_bound_f1": 0.5892857142857143
+      },
+      {
+        "epoch": 5,
+        "train_loss": 1.1115638450788716,
+        "val_prom_f1": 0.7246290801186943,
+        "val_bound_f1": 0.5887050770108385
+      },
+      {
+        "epoch": 6,
+        "train_loss": 1.0709064670569668,
+        "val_prom_f1": 0.7371794871794872,
+        "val_bound_f1": 0.5860566448801743
+      },
+      {
+        "epoch": 7,
+        "train_loss": 1.0458887309214597,
+        "val_prom_f1": 0.7362605408548997,
+        "val_bound_f1": 0.58
+      },
+      {
+        "epoch": 8,
+        "train_loss": 1.0154183828679273,
+        "val_prom_f1": 0.7197867298578199,
+        "val_bound_f1": 0.5924984106802289
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.9974509032798117,
+        "val_prom_f1": 0.6387808041504539,
+        "val_bound_f1": 0.5724907063197026
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.9622607867211482,
+        "val_prom_f1": 0.6532695374800638,
+        "val_bound_f1": 0.5765969474279253
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.9344593431036615,
+        "val_prom_f1": 0.6937404580152672,
+        "val_bound_f1": 0.5756853396901073
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.9125636062691302,
+        "val_prom_f1": 0.6917746309129256,
+        "val_bound_f1": 0.582080577269994
+      }
+    ],
+    "checkpoint": "artifacts/sequence_level_bilstm.pt"
+  }
+}

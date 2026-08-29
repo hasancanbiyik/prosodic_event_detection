@@ -1,0 +1,70 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "prosody"
+version = "0.2.0"
+description = "Prosodic event detection (prominence and boundary) on the Boston University Radio News Corpus."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Hasan Can Biyik" },
+]
+requires-python = ">=3.10"
+
+dependencies = [
+    "numpy>=1.26,<2.3",
+    "pandas>=2.1",
+    "scipy>=1.11",
+    "scikit-learn>=1.4",
+    "librosa>=0.10.1",
+    "soundfile>=0.12",
+    "torch>=2.1",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "tqdm>=4.66",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.5",
+    "black>=24.0",
+    "mypy>=1.8",
+    "pre-commit>=3.6",
+    "nbstripout>=0.7",
+]
+notebooks = [
+    "jupyter>=1.0",
+    "ipykernel>=6.29",
+]
+
+[project.scripts]
+prosody = "prosody.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/prosody"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "N", "SIM"]
+ignore = [
+    "E501",  # line length handled by formatter
+    "N802",  # established ML notation such as _normalize_X_seq
+    "N803",  # established ML notation such as X_train
+    "N806",  # established ML notation such as X_train
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"

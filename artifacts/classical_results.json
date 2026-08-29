@@ -1,0 +1,323 @@
+{
+  "stats": {
+    "n_files": 142,
+    "n_speakers": 6,
+    "total_minutes": 70.03116666666666,
+    "total_frames": 420187,
+    "prominence_rate": 0.17501493382708175,
+    "boundary_rate": 0.05279792092568309,
+    "per_speaker": {
+      "f1a": 22,
+      "f2b": 24,
+      "f3a": 24,
+      "m1b": 24,
+      "m2b": 24,
+      "m3b": 24
+    }
+  },
+  "frame_classical": {
+    "prominence": {
+      "LogisticRegression": {
+        "val": {
+          "task": "prominence",
+          "f1": 0.5304772857964347,
+          "precision": 0.4335871404399323,
+          "recall": 0.6831309241706162,
+          "auc": 0.8196125615117057,
+          "positive_rate": 0.19398396874191973,
+          "trivial_majority_f1": 0.32493563367742245,
+          "n_frames": 69614,
+          "confusion": [
+            44059,
+            12051,
+            4279,
+            9225
+          ]
+        },
+        "test": {
+          "task": "prominence",
+          "f1": 0.4848605577689243,
+          "precision": 0.35144208208497274,
+          "recall": 0.7815685959701373,
+          "auc": 0.8132038365655503,
+          "positive_rate": 0.17349098910893848,
+          "trivial_majority_f1": 0.2956835471581671,
+          "n_frames": 71802,
+          "confusion": [
+            41378,
+            17967,
+            2721,
+            9736
+          ]
+        }
+      },
+      "RandomForest": {
+        "val": {
+          "task": "prominence",
+          "f1": 0.5322182909831672,
+          "precision": 0.514333080058023,
+          "recall": 0.5513921800947867,
+          "auc": 0.8329230291759331,
+          "positive_rate": 0.19398396874191973,
+          "trivial_majority_f1": 0.32493563367742245,
+          "n_frames": 69614,
+          "confusion": [
+            49079,
+            7031,
+            6058,
+            7446
+          ]
+        },
+        "test": {
+          "task": "prominence",
+          "f1": 0.47160783605669404,
+          "precision": 0.3280273774763744,
+          "recall": 0.8387252147387011,
+          "auc": 0.8160309056887263,
+          "positive_rate": 0.17349098910893848,
+          "trivial_majority_f1": 0.2956835471581671,
+          "n_frames": 71802,
+          "confusion": [
+            37942,
+            21403,
+            2009,
+            10448
+          ]
+        }
+      }
+    },
+    "boundary": {
+      "LogisticRegression": {
+        "val": {
+          "task": "boundary",
+          "f1": 0.13359575356354744,
+          "precision": 0.0758268169662503,
+          "recall": 0.5609817180065114,
+          "auc": 0.6048696265232723,
+          "positive_rate": 0.05735915189473382,
+          "trivial_majority_f1": 0.10849511595364571,
+          "n_frames": 69614,
+          "confusion": [
+            38320,
+            27301,
+            1753,
+            2240
+          ]
+        },
+        "test": {
+          "task": "boundary",
+          "f1": 0.11762211925744223,
+          "precision": 0.06577922297869458,
+          "recall": 0.5551743853630646,
+          "auc": 0.6067943226869525,
+          "positive_rate": 0.04871730592462605,
+          "trivial_majority_f1": 0.09290836653386454,
+          "n_frames": 71802,
+          "confusion": [
+            40723,
+            27581,
+            1556,
+            1942
+          ]
+        }
+      },
+      "RandomForest": {
+        "val": {
+          "task": "boundary",
+          "f1": 0.16409133308999474,
+          "precision": 0.09789972899728998,
+          "recall": 0.5066366140746306,
+          "auc": 0.662152152530472,
+          "positive_rate": 0.05735915189473382,
+          "trivial_majority_f1": 0.10849511595364571,
+          "n_frames": 69614,
+          "confusion": [
+            46980,
+            18641,
+            1970,
+            2023
+          ]
+        },
+        "test": {
+          "task": "boundary",
+          "f1": 0.1348327566320646,
+          "precision": 0.08445311371189135,
+          "recall": 0.33419096626643796,
+          "auc": 0.6481911082007709,
+          "positive_rate": 0.04871730592462605,
+          "trivial_majority_f1": 0.09290836653386454,
+          "n_frames": 71802,
+          "confusion": [
+            55631,
+            12673,
+            2329,
+            1169
+          ]
+        }
+      }
+    }
+  },
+  "sequence_classical": {
+    "prominence": {
+      "LogisticRegression": {
+        "val": {
+          "task": "prominence",
+          "f1": 0.5590361445783133,
+          "precision": 0.8982300884955752,
+          "recall": 0.4057971014492754,
+          "auc": 0.7703704889878158,
+          "positive_rate": 0.7276363636363636,
+          "trivial_majority_f1": 0.8423489791622816,
+          "n_frames": 2750,
+          "confusion": [
+            657,
+            92,
+            1189,
+            812
+          ]
+        },
+        "test": {
+          "task": "prominence",
+          "f1": 0.8082657598744442,
+          "precision": 0.7988624612202688,
+          "recall": 0.8178930651138169,
+          "auc": 0.7725745022087371,
+          "positive_rate": 0.6663139329805996,
+          "trivial_majority_f1": 0.7997459779847587,
+          "n_frames": 2835,
+          "confusion": [
+            557,
+            389,
+            344,
+            1545
+          ]
+        }
+      },
+      "RandomForest": {
+        "val": {
+          "task": "prominence",
+          "f1": 0.765625,
+          "precision": 0.866708780795957,
+          "recall": 0.6856571714142928,
+          "auc": 0.7886083660439474,
+          "positive_rate": 0.7276363636363636,
+          "trivial_majority_f1": 0.8423489791622816,
+          "n_frames": 2750,
+          "confusion": [
+            538,
+            211,
+            629,
+            1372
+          ]
+        },
+        "test": {
+          "task": "prominence",
+          "f1": 0.806,
+          "precision": 0.7636191378493605,
+          "recall": 0.853361566966649,
+          "auc": 0.7433388136725697,
+          "positive_rate": 0.6663139329805996,
+          "trivial_majority_f1": 0.7997459779847587,
+          "n_frames": 2835,
+          "confusion": [
+            447,
+            499,
+            277,
+            1612
+          ]
+        }
+      }
+    },
+    "boundary": {
+      "LogisticRegression": {
+        "val": {
+          "task": "boundary",
+          "f1": 0.4859903381642512,
+          "precision": 0.38163884673748105,
+          "recall": 0.6688829787234043,
+          "auc": 0.6758573733307778,
+          "positive_rate": 0.27345454545454545,
+          "trivial_majority_f1": 0.42946887492861224,
+          "n_frames": 2750,
+          "confusion": [
+            1183,
+            815,
+            249,
+            503
+          ]
+        },
+        "test": {
+          "task": "boundary",
+          "f1": 0.4667133847231955,
+          "precision": 0.42857142857142855,
+          "recall": 0.5123076923076924,
+          "auc": 0.738511529660271,
+          "positive_rate": 0.2292768959435626,
+          "trivial_majority_f1": 0.37302725968436157,
+          "n_frames": 2835,
+          "confusion": [
+            1741,
+            444,
+            317,
+            333
+          ]
+        }
+      },
+      "RandomForest": {
+        "val": {
+          "task": "boundary",
+          "f1": 0.4498094027954257,
+          "precision": 0.4306569343065693,
+          "recall": 0.47074468085106386,
+          "auc": 0.6803166198113006,
+          "positive_rate": 0.27345454545454545,
+          "trivial_majority_f1": 0.42946887492861224,
+          "n_frames": 2750,
+          "confusion": [
+            1530,
+            468,
+            398,
+            354
+          ]
+        },
+        "test": {
+          "task": "boundary",
+          "f1": 0.4073455759599332,
+          "precision": 0.44525547445255476,
+          "recall": 0.37538461538461537,
+          "auc": 0.6932976588628762,
+          "positive_rate": 0.2292768959435626,
+          "trivial_majority_f1": 0.37302725968436157,
+          "n_frames": 2835,
+          "confusion": [
+            1881,
+            304,
+            406,
+            244
+          ]
+        }
+      }
+    }
+  },
+  "split": {
+    "train_speakers": [
+      "f1a",
+      "f2b",
+      "m1b",
+      "m3b"
+    ],
+    "val_speakers": [
+      "m2b"
+    ],
+    "test_speakers": [
+      "f3a"
+    ]
+  },
+  "config": {
+    "seed": 42,
+    "window_frames": 50,
+    "hop_frames": 25,
+    "prominence_threshold": 0.15,
+    "boundary_threshold": 0.1
+  }
+}
